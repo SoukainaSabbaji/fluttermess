@@ -42,19 +42,25 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: Text('test'),
-        ),
-        body: Center(
-            child: ElevatedButton(
-          child: Text('Open Dialog'),
+      appBar: AppBar(
+        title: Text('tap if you have more than one kidney'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('open dialog'),
           onPressed: () {
             showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                      title: Text('hehe'),
+                      title: Text('mario section here'),
+                      actions: [
+                        TextButton(
+                          child: Text(''),
+                          onPressed: () => Navigator.pop(context),
+                        )
+                      ],
                     ));
           },
-        )),
-      );
+        ),
+      ));
 }
